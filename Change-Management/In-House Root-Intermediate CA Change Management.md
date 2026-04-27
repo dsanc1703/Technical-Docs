@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Change Summary
 
 This change establishes a centralized Public Key Infrastructure across all plant networks by deploying a two-tier hierarchy (Offline Root CA and Online Intermediate CA) across each plant subnet. This allows devices and administrative workstations to trust HTTPS connections signed by our internal Certificate Authority, eliminating the constant ignorance of warnings should a legitimate MITM be in effect
