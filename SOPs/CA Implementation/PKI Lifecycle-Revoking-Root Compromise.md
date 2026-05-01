@@ -1,4 +1,4 @@
-[[View PDF Version]](<./SOPS/CA Implementation/PDF - PKI Lifecycle, Revoking, and Root Compromise>)
+[[View PDF Version]](<./SOPS/CA Implementation/PDF PKI Lifecycle-Revoking-Root Compromise.pdf>)
 
 # Purpose
 

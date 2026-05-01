@@ -1,4 +1,4 @@
-[[View PDF Version]](<./RCAs/PDF - Root Cause Analysis Terminal Server Logon Fails>)
+[[View PDF Version]](<./RCAs/PDF Root Cause Analysis Terminal Server Logon Fails.pdf>)
 
 # Incident Description
 

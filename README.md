@@ -7,7 +7,7 @@
 * [Windows Domain Certificate Template w/ GPO Auto Enrollment](<./SOPs/CA Implementation/Step 3 Domain CA Distribution with Auto Enrollment>)
 * [Non-Windows Certificate Template Creation](<./SOPs/CA Implementation/Step 4 Non-Windows Certificate Template>)
 * [Non-Windows Certificate Distribution](<./SOPs/CA Implementation/Step 5 Non-Windows CA Distribution>)
-* [PKI Lifecycle, Revoking, and Root Compromise](<./SOPS/CA Implementation/PKI Lifecycle, Revoking, and Root Compromise>)
+* [PKI Lifecycle, Revoking, and Root Compromise](<./SOPS/CA Implementation/PKI Lifecycle-Revoking-Root Compromise>)
 
 # Change Management Plans
 
