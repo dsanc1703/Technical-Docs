@@ -1,3 +1,5 @@
+[[View PDF Version]](<./SOPs/CA Implementation/PDF - Step 3 Domain CA Distribution with Auto Enrollment>)
+
 # Purpose
 
 

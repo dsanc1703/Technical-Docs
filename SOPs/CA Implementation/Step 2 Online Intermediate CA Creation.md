@@ -1,3 +1,5 @@
+[[View PDF Version]](<./SOPs/CA Implementation/PDF - Step 2 Online Intermediate CA Creation>)
+
 # Purpose
 
 

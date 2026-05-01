@@ -1,3 +1,5 @@
+[[View PDF Version]](<./Change-Management/PDF - In-House Root-Intermediate CA Change Management>)
+
 # Change Summary
 
 This change establishes a centralized Public Key Infrastructure across all plant networks by deploying a two-tier hierarchy (Offline Root CA and Online Intermediate CA) across each plant subnet. This allows devices and administrative workstations to trust HTTPS connections signed by our internal Certificate Authority, eliminating the constant ignorance of warnings should a legitimate MITM be in effect
@@ -31,25 +33,28 @@ Benefits of an internal trusted Root CA:
 
 #### Preparation
 
-- Build and config the new offline Root CA (not domain-joined) [\[Refer to SOP\]]
-- Build and config the new online Intermediate CA (domain-joined) [\[Refer to SOP\]]
-- Have Root CA sign the Intermediate CA's Certificate Signing Request
-- Export Root CA public certificate onto secure USB media or secure network share
+- Build and config the new offline Root CA (not domain-joined) [[SOP]](<./SOPs/CA Implementation/Step 1 Offline Root CA Creation>)
+- Build and config the new online Intermediate CA (domain-joined) [[SOP]](<./SOPs/CA Implementation/Step 2 Online Intermediate CA Creation>)
+  - Create Certificate Template for Windows devices [[SOP]](<./SOPs/CA Implementation/Step 3 Domain CA Distribution with Auto Enrollment>)
+  - Create Certificate Template for Non-Windows devices [[SOP]](<./SOPs/CA Implementation/Step 4 Non-Windows Certificate Template>)
 - Backup Group Policy of domains
 - Notify of maintenance to any concerning parties
 
 #### Implementing
 
-- On plant domain controller [\[Refer to SOP\]]
-  - Import the Root CA certificate into: Group Policy: Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Public Key Policies -> Trusted Root Certification Authorities
-  - Deploy the updated GPO to all systems in the domain
-  - Validate by connecting to test device that uses a certificate issued by the Intermediate CA
-- Confirm trusted HTTPS connection
+- On plant domain controller [[SOP]](<./SOPs/CA Implementation/Step 3 Domain CA Distribution with Auto Enrollment>)
+  - Create GPO for PKI Distribution
+  - Import the Root CA certificate into created GPO
+  - Enable Auto-Enrollment on GPO
+  - Validate auto-issued certificate on a domain-joined device
+
+- For each Non-Windows device, manually install signed certificate [[SOP]](<./SOPs/CA Implementation/Step 5 Non-Windows CA Distribution>)
 
 #### Post-Implementing
 
 - Monitor for any trust chain errors on devices
-- Document which domains received the new Root CA certificate
+- Renew certficate authories and certification revocation list [[SOP]](<./SOPS/CA Implementation/PKI Lifecycle, Revoking, and Root Compromise>)
+- Revoke child certificate and certificate authorities as necessary [[SOP]](<./SOPS/CA Implementation/PKI Lifecycle, Revoking, and Root Compromise>)
 
 # Risk Assessment of Changes
 
@@ -66,6 +71,6 @@ These "risks" are all reversible through removal of certificate through Group Po
 
 Should any issue arise:
 
-- Remove the Root CA certificate from the affected domain via GPO
+- Remove implemnted CA certificates from the affected domain via GPO
 - Revert to previous Group Policy version
 - Force GPUpdate on impacted devices
