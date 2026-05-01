@@ -1,4 +1,4 @@
-[[View PDF Version]](<./SOPs/CA Implementation/PDF Step 1 Offline Root CA Creation.pdf>)
+[View PDF Version](<./PDF Step 1 Offline Root CA Creation.pdf>)
 
 # Purpose
 

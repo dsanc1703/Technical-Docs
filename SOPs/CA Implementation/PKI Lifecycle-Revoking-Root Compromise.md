@@ -1,4 +1,4 @@
-[[View PDF Version]](<./SOPS/CA Implementation/PDF PKI Lifecycle-Revoking-Root Compromise.pdf>)
+[View PDF Version](<./PDF PKI Lifecycle-Revoking-Root Compromise.pdf>)
 
 # Purpose
 
@@ -187,14 +187,14 @@ Standard procedure for Root and Intermediate CA Renewal and Certificate Revocati
 **If server is breached or private key is stolen, entire PKI environment must be rebuilt**
 
 - Power down / wipe the Root and/or Intermediate CA servers
-- Follow **SOP - Step 1 Offline Root CA Creation**
-- Follow **SOP - Step 2 Online Intermediate CA Creation**
+- Follow [**SOP - Step 1 Offline Root CA Creation**](<./Step 1 Offline Root CA Creation>)
+- Follow [**SOP - Step 2 Online Intermediate CA Creation**](<./Step 2 Online Intermediate CA Creation>)
 - On **Domain Controller,** right-click our "PKI" GPO > select **Edit**
   - Go to **Computer Configuration > Policies > Windows Settings > Security Settings > Public Key Policies**
   - For **Trusted Root Certification Authorities**, remove the old Root CA certificate
   - For **Intermediate Certification Authorities**, remove the old Intermediate CA certificate
-- Follow **SOP - Step 3 Domain CA Distribution with Auto Enrollment**
+- Follow [**SOP - Step 3 Domain CA Distribution with Auto Enrollment**](<./Step 3 Domain CA Distribution with Auto Enrollment>)
   - Skip section _Creating the GPO in Domain Controller_
   - Skip section _Enabling Auto-Enrollment Policy in the GPO_
-- Follow **SOP - Step 4 Non-Windows Certificate Template**
-- Follow **SOP - Step 5 Non-Windows CA Distribution**
+- Follow [**SOP - Step 4 Non-Windows Certificate Template**](<./Step 4 Non-Windows Certificate Template>)
+- Follow [**SOP - Step 5 Non-Windows CA Distribution**](<./Step 5 Non-Windows CA Distribution>)

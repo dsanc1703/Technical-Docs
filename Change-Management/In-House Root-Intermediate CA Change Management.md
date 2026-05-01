@@ -1,4 +1,4 @@
-[[View PDF Version]](<./Change-Management/PDF In-House Root-Intermediate CA Change Management.pdf>)
+[View PDF Version](<./PDF In-House Root-Intermediate CA Change Management.pdf>)
 
 # Change Summary
 
@@ -33,28 +33,28 @@ Benefits of an internal trusted Root CA:
 
 #### Preparation
 
-- Build and config the new offline Root CA (not domain-joined) [[SOP]](<./SOPs/CA Implementation/Step 1 Offline Root CA Creation>)
-- Build and config the new online Intermediate CA (domain-joined) [[SOP]](<./SOPs/CA Implementation/Step 2 Online Intermediate CA Creation>)
-  - Create Certificate Template for Windows devices [[SOP]](<./SOPs/CA Implementation/Step 3 Domain CA Distribution with Auto Enrollment>)
-  - Create Certificate Template for Non-Windows devices [[SOP]](<./SOPs/CA Implementation/Step 4 Non-Windows Certificate Template>)
+- Build and config the new offline Root CA (not domain-joined) [[SOP]](<../SOPs/CA Implementation/Step 1 Offline Root CA Creation>)
+- Build and config the new online Intermediate CA (domain-joined) [[SOP]](<../SOPs/CA Implementation/Step 2 Online Intermediate CA Creation>)
+  - Create Certificate Template for Windows devices [[SOP]](<../SOPs/CA Implementation/Step 3 Domain CA Distribution with Auto Enrollment>)
+  - Create Certificate Template for Non-Windows devices [[SOP]](<../SOPs/CA Implementation/Step 4 Non-Windows Certificate Template>)
 - Backup Group Policy of domains
 - Notify of maintenance to any concerning parties
 
 #### Implementing
 
-- On plant domain controller [[SOP]](<./SOPs/CA Implementation/Step 3 Domain CA Distribution with Auto Enrollment>)
+- On plant domain controller [[SOP]](<../SOPs/CA Implementation/Step 3 Domain CA Distribution with Auto Enrollment>)
   - Create GPO for PKI Distribution
   - Import the Root CA certificate into created GPO
   - Enable Auto-Enrollment on GPO
   - Validate auto-issued certificate on a domain-joined device
 
-- For each Non-Windows device, manually install signed certificate [[SOP]](<./SOPs/CA Implementation/Step 5 Non-Windows CA Distribution>)
+- For each Non-Windows device, manually install signed certificate [[SOP]](<../SOPs/CA Implementation/Step 5 Non-Windows CA Distribution>)
 
 #### Post-Implementing
 
 - Monitor for any trust chain errors on devices
-- Renew certficate authories and certification revocation list [[SOP]](<./SOPS/CA Implementation/PKI Lifecycle, Revoking, and Root Compromise>)
-- Revoke child certificate and certificate authorities as necessary [[SOP]](<./SOPS/CA Implementation/PKI Lifecycle, Revoking, and Root Compromise>)
+- Renew certficate authories and certification revocation list [[SOP]](<../SOPS/CA Implementation/PKI Lifecycle, Revoking, and Root Compromise>)
+- Revoke child certificate and certificate authorities as necessary [[SOP]](<../SOPS/CA Implementation/PKI Lifecycle, Revoking, and Root Compromise>)
 
 # Risk Assessment of Changes
 

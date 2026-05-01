@@ -1,4 +1,4 @@
-[[View PDF Version]](<./SOPs/CA Implementation/PDF Step 4 Non-Windows Certificate Template.pdf>)
+[View PDF Version](<./PDF Step 4 Non-Windows Certificate Template.pdf>)
 
 # Purpose
 

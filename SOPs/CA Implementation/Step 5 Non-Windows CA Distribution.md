@@ -1,4 +1,4 @@
-[[View PDF Version]](<./SOPs/CA Implementation/PDF Step 5 Non-Windows CA Distribution.pdf>)
+[View PDF Version](<./PDF Step 5 Non-Windows CA Distribution.pdf>)
 
 # Purpose
 
